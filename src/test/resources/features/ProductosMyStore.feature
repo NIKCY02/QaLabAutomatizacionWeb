@@ -19,3 +19,4 @@ Característica: Product - Store
   | usuario                      | clave       | categoria | subcategoria | cantidad |
   | nikcoluribehuamani@gmail.com | Nikcol1234  | CLOTHES   | MEN          | 2        |
   | alvaroavalos@gmail.com       | Alvaro1234  | CLOTHES   | WOMEN        | 1        |
+  | nikcoluribehuamani@gmail.com | Nikcol1234  | AUTOS     | MEN          | 1        |

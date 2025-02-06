@@ -17,10 +17,14 @@ public class ProdMyStorePage {
     public static By SeleccionoPrimerProducto = By.xpath("//*[@id=\"js-product-list\"]/div[1]/div/article/div/div[1]/a/picture/img");
     public static By Elijo2Unidades = By.xpath("//*[@id=\"quantity_wanted\"]");
     public static By AgregoalcarritodeCompra = By.xpath("//*[@id=\"add-to-cart-or-refresh\"]/div[2]/div/div[2]/button");
-    public static By FinalizoCompra = By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a");
-    public static By CalculoTotal = By.xpath("");
-    public static By TituloCarrito = By.xpath("//*[@id=\"main\"]/div/div[1]/div/div[1]/h1");
-    public static By CalculoPrecio = By.xpath("//*[@id=\"main\"]/div/div[1]/div/div[2]/ul/li/div/div[3]/div/div[2]/div/div[2]/span/strong");
+    public static By PrecioProducto = By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[1]/div/div[2]/span[3]/strong");
+    public static By CantidadProducto = By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[1]/div/div[2]/p");
+    public static By CalcularCompra = By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/p[4]/span[2]");
+    public static By FinalizarCompraBtn = By.xpath("//*[@id=\"blockcart-modal\"]/div/div/div[2]/div/div[2]/div/div/a");
+    public static By TituloCarrito = By.xpath("//h1[contains(text(), 'Carrito')]");
+    public static By CantProducto = By.xpath("//*[@id=\"main\"]/div/div[1]/div/div[2]/ul/li/div/div[3]/div/div[2]/div/div[1]/div/input");
+    public static By CantPrecio = By.xpath("//*[@id=\"main\"]/div/div[1]/div/div[2]/ul/li/div/div[2]/div[2]/div[2]/span");
+    public static By CalculoPrecioTotal = By.xpath("//*[@id=\"main\"]/div/div[2]/div[1]/div[1]/div[2]/div[2]/span[2]");
 
 
 }

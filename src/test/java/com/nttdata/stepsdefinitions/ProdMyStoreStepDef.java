@@ -35,36 +35,51 @@ public class ProdMyStoreStepDef {
     public void navegoALaCategoriaYLuegoALaSubcategoria(String categoria, String subcategoria) {
         ProdMyStoreStep elementoSeleccionado = new ProdMyStoreStep(driver);
         elementoSeleccionado.SeleccionaCategoriaySubcategoria(categoria,subcategoria);
-        screenShot();
+
     }
 
     @Y("agrego {int} unidades del primer producto al carrito")
     public void agregoUnidadesDelPrimerProductoAlCarrito(int productos) {
         ProdMyStoreStep productoSeleccionado = new ProdMyStoreStep(driver);
         productoSeleccionado.SeleccionaProductoyCantidad(productos);
-
+        screenShot();
     }
 
     @Entonces("valido en el popup la confirmación del producto agregado")
-    public void validoEnElPopupLaConfirmaciónDelProductoAgregado() {
-
+    public void validoEnElPopupLaConfirmaciónDelProductoAgregado() throws InterruptedException{
+        ProdMyStoreStep productoAgregado = new ProdMyStoreStep(driver);
+        productoAgregado.ValidacionProducto();
+        screenShot();
     }
 
     @Y("valido en el popup que el monto total sea calculado correctamente")
     public void validoEnElPopupQueElMontoTotalSeaCalculadoCorrectamente() {
+        ProdMyStoreStep validarprecio = new ProdMyStoreStep(driver);
+        validarprecio.ValidacionPrecio();
 
     }
 
     @Cuando("finalizo la compra")
-    public void finalizoLaCompra() {
-
+    public void finalizoLaCompra() throws InterruptedException{
+        ProdMyStoreStep finalizarCompra = new ProdMyStoreStep(driver);
+        finalizarCompra.FinalizoCompra();
+        screenShot();
     }
 
     @Entonces("valido el titulo de la pagina del carrito")
-    public void validoElTituloDeLaPaginaDelCarrito(String Titulo) {
-        //String title =  carritoSteps(driver).getTitle();
-        //prueba: validamos el título del producto
-        //Assertions.assertEquals(Titulo, title);
+    public void validoElTituloDeLaPaginaDelCarrito() {
+        ProdMyStoreStep title = new ProdMyStoreStep(driver); // Asegúrate de que driver no sea null
+        title.TituloCarrito();
+        screenShot();
+        /*ProdMyStoreStep title = new ProdMyStoreStep(driver);
+        title.TituloCarrito();
+        screenShot();*/
     }
 
+    @Y("vuelvo a validar el calculo de precios en el carrito")
+    public void vuelvoAValidarElCalculoDePreciosEnElCarrito() {
+        ProdMyStoreStep precioTot = new ProdMyStoreStep(driver);
+        precioTot.ValidacionPrecioCarrito();
+
+    }
 }
